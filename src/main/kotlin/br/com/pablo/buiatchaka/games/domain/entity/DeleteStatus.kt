@@ -15,7 +15,7 @@ class DeleteStatus(
     val id: Long? = null,
 
     @Column(nullable = false)
-    val description: String = "Ativo"
+    val description: String
 ) {
     @Column(nullable = false)
     val createdDate: LocalDateTime = LocalDateTime.now()
