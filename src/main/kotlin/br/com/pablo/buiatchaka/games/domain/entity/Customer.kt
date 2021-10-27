@@ -39,6 +39,8 @@ class Customer(
     @Column(nullable = false)
     val birthDate: LocalDate,
 
+    @ManyToOne
+    val deleteStatus: DeleteStatus? = null
 ) {
     @OneToMany(
         mappedBy = "customer",

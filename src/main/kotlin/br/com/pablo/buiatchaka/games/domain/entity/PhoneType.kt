@@ -16,11 +16,11 @@ class PhoneType(
     val id: Long? = null,
 
     @Column(nullable = false)
-    val description: String
-) {
-    @ManyToOne
-    val deleteStatus: DeleteStatus = DeleteStatus()
+    val description: String,
 
+    @ManyToOne
+    val deleteStatus: DeleteStatus? = null
+) {
     @Column(nullable = false)
     val createdDate: LocalDateTime = LocalDateTime.now()
 

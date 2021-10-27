@@ -42,10 +42,9 @@ class Address(
     @ManyToOne
     val customer: Customer,
 
-) {
     @ManyToOne
-    val deleteStatus: DeleteStatus = DeleteStatus()
-
+    val deleteStatus: DeleteStatus? = null
+) {
     @Column(nullable = false)
     val createdDate: LocalDateTime = LocalDateTime.now()
 
