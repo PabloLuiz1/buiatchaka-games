@@ -28,7 +28,7 @@ class Customer(
     val cpf: String,
 
     @ManyToOne
-    val gender: Gender,
+    val gender: CustomerGender,
 
     @Column(nullable = false)
     val email: String,
@@ -37,14 +37,9 @@ class Customer(
     val password: String,
 
     @Column(nullable = false)
-    val birthDate: LocalDate
+    val birthDate: LocalDate,
+
 ) {
-    @Column(nullable = false)
-    val createdDate: LocalDateTime = LocalDateTime.now()
-
-    @Column(nullable = false)
-    val updatedDate: LocalDateTime = LocalDateTime.now()
-
     @OneToMany(
         mappedBy = "customer",
         cascade = [CascadeType.PERSIST]
@@ -56,4 +51,10 @@ class Customer(
         cascade = [CascadeType.PERSIST]
     )
     val phones: MutableList<CustomerPhone> = mutableListOf()
+
+    @Column(nullable = false)
+    val createdDate: LocalDateTime = LocalDateTime.now()
+
+    @Column(nullable = false)
+    val updatedDate: LocalDateTime = LocalDateTime.now()
 }
