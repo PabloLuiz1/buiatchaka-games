@@ -8,6 +8,7 @@ import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
+import javax.persistence.ManyToOne
 import javax.persistence.OneToMany
 
 @Entity
@@ -25,6 +26,9 @@ class Customer(
 
     @Column(nullable = false)
     val cpf: String,
+
+    @ManyToOne
+    val gender: Gender,
 
     @Column(nullable = false)
     val email: String,
