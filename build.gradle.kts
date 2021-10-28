@@ -26,6 +26,9 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework:spring-mock:2.0.8")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
+    testImplementation("io.mockk:mockk:1.12.0")
 }
 
 tasks.test {
