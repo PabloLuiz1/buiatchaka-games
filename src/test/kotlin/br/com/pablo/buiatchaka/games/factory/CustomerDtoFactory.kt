@@ -10,6 +10,6 @@ class CustomerDtoFactory {
     }
 
     fun create(): CustomerDto {
-        return CustomerDto(EMAIL, PASSWORD)
+        return CustomerDto(email = EMAIL, password = PASSWORD)
     }
 }
