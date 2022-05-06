@@ -14,8 +14,5 @@ class ProductPricing(
     val id: Long? = null,
 
     @Column(nullable = false)
-    val name: String,
-
-    @Column(nullable = false)
     val percentage: Double,
 )
