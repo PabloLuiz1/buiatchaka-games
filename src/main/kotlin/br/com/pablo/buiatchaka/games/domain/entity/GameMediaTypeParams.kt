@@ -4,13 +4,8 @@ import br.com.pablo.buiatchaka.games.usecase.exception.InvalidGameMediaTypeExcep
 import org.apache.commons.lang3.StringUtils
 
 enum class GameMediaTypeParams(val value: String) {
-    ACTION("Ação"),
-    SIMULATOR("Simulação"),
-    SPORTS("Esporte"),
-    ADVENTURE("Aventura"),
-    FIRST_PERSON_SHOOTER("Tiro em primeira pessoa"),
-    INDIE("Indie");
-
+    PHYSICAL("Física"),
+    DIGITAL("Digital");
     companion object {
         fun fromGameMediaType(value: String): GameMediaTypeParams {
             return if (StringUtils.isBlank(value)) {
