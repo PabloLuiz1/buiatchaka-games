@@ -1,6 +1,5 @@
 package br.com.pablo.buiatchaka.games.domain.entity
 
-import java.time.LocalDateTime
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -20,10 +19,4 @@ class PhoneType(
 
     @ManyToOne
     val deleteStatus: DeleteStatus? = null
-) {
-    @Column(nullable = false)
-    val createdDate: LocalDateTime = LocalDateTime.now()
-
-    @Column(nullable = false)
-    val updatedDate: LocalDateTime = LocalDateTime.now()
-}
+)
