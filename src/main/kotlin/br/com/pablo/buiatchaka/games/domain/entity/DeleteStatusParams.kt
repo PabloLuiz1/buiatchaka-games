@@ -5,7 +5,8 @@ import org.apache.commons.lang3.StringUtils
 
 enum class DeleteStatusParams(val value: String) {
     ACTIVE("Ativo"),
-    DISABLED("Excluído");
+    DISABLED("Excluído"),
+    SOLD_OFF("Esgotado");
 
     companion object {
         fun fromDeleteStatus(value: String): DeleteStatusParams {
